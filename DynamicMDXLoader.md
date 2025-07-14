@@ -226,7 +226,7 @@ const MDXContent = ({ source }) => {
           fontWeight: '500',
           margin: '8px 4px',
           transition: 'all 0.3s ease'
-        }}
+        \}\}
         onMouseOver={(e) => e.target.style.opacity = '0.8'}
         onMouseOut={(e) => e.target.style.opacity = '1'}
       >
@@ -242,8 +242,8 @@ const MDXContent = ({ source }) => {
         margin: '16px 0',
         border: '1px solid #e9ecef',
         boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
-      }}>
-        {title && <h3 style={{ marginTop: 0, color: '#333' }}>{title}</h3>}
+      \}\}>
+        {title && <h3 style={{ marginTop: 0, color: '#333' \}\}>{title}</h3>}
         {children}
       </div>
     ),
