@@ -265,7 +265,7 @@ const MDXContent = ({ source }) => {
           border: `1px solid ${colors[type].border}`,
           borderLeft: `4px solid ${colors[type].border}`,
           margin: '16px 0'
-        }}>
+        \}\}>
           {children}
         </div>
       );
@@ -282,7 +282,7 @@ const MDXContent = ({ source }) => {
           padding: '12px',
           borderRadius: '8px',
           border: '1px solid #dee2e6'
-        }}>
+        \}\}>
           <button 
             onClick={() => setCount(count - 1)}
             style={{
@@ -293,11 +293,11 @@ const MDXContent = ({ source }) => {
               height: '32px',
               borderRadius: '50%',
               cursor: 'pointer'
-            }}
+            \}\}
           >
             -
           </button>
-          <span style={{ fontSize: '18px', fontWeight: 'bold', minWidth: '40px', textAlign: 'center' }}>
+          <span style={{ fontSize: '18px', fontWeight: 'bold', minWidth: '40px', textAlign: 'center' \}\}>
             {count}
           </span>
           <button 
@@ -310,7 +310,7 @@ const MDXContent = ({ source }) => {
               height: '32px',
               borderRadius: '50%',
               cursor: 'pointer'
-            }}
+            \}\}
           >
             +
           </button>
@@ -319,9 +319,9 @@ const MDXContent = ({ source }) => {
     },
     
     // Стилизованные HTML элементы
-    h1: (props) => <h1 style={{ color: '#667eea', borderBottom: '3px solid #667eea', paddingBottom: '8px' }} {...props} />,
-    h2: (props) => <h2 style={{ color: '#333', marginTop: '32px' }} {...props} />,
-    h3: (props) => <h3 style={{ color: '#555' }} {...props} />,
+    h1: (props) => <h1 style={{ color: '#667eea', borderBottom: '3px solid #667eea', paddingBottom: '8px' \}\} {...props} />,
+    h2: (props) => <h2 style={{ color: '#333', marginTop: '32px' \}\} {...props} />,
+    h3: (props) => <h3 style={{ color: '#555' \}\} {...props} />,
     blockquote: (props) => (
       <blockquote style={{
         borderLeft: '4px solid #667eea',
@@ -331,7 +331,7 @@ const MDXContent = ({ source }) => {
         background: '#f8f9ff',
         padding: '16px',
         borderRadius: '0 8px 8px 0'
-      }} {...props} />
+      \}\} {...props} />
     ),
     code: (props) => (
       <code style={{
@@ -340,7 +340,7 @@ const MDXContent = ({ source }) => {
         borderRadius: '4px',
         fontSize: '14px',
         fontFamily: 'Monaco, Consolas, monospace'
-      }} {...props} />
+      \}\} {...props} />
     )
   };
 
