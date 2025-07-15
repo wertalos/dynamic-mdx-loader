@@ -1,0 +1,107 @@
+# Контакты
+
+Свяжитесь с нами удобным для вас способом!
+
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', margin: '30px 0'}}>
+
+<Card title="📍 Офис в Москве">
+**Адрес:** г. Москва, ул. Тверская, д. 123, офис 456
+
+**Телефон:** +7 (495) 123-45-67
+
+**Email:** moscow@example.com
+
+**Время работы:** Пн-Пт 9:00-18:00
+
+<Button onClick={() => alert('Построить маршрут в Яндекс.Картах')}>
+  Показать на карте
+</Button>
+</Card>
+
+<Card title="📍 Офис в СПб">
+**Адрес:** г. Санкт-Петербург, Невский пр., д. 789
+
+**Телефон:** +7 (812) 987-65-43
+
+**Email:** spb@example.com
+
+**Время работы:** Пн-Пт 10:00-19:00
+
+<Button onClick={() => alert('Построить маршрут в Яндекс.Картах')}>
+  Показать на карте
+</Button>
+</Card>
+
+</div>
+
+## Форма обратной связи
+
+<Alert type="info">
+Заполните форму ниже, и мы свяжемся с вами в течение 24 часов!
+</Alert>
+
+<Card title="✉️ Напишите нам">
+
+**Имя:** <input type="text" style={{width: '100%', padding: '8px', margin: '8px 0', border: '1px solid #ccc', borderRadius: '4px'}} placeholder="Ваше имя" />
+
+**Email:** <input type="email" style={{width: '100%', padding: '8px', margin: '8px 0', border: '1px solid #ccc', borderRadius: '4px'}} placeholder="your@email.com" />
+
+**Тема:** 
+<select style={{width: '100%', padding: '8px', margin: '8px 0', border: '1px solid #ccc', borderRadius: '4px'}}>
+  <option>Веб-разработка</option>
+  <option>Мобильные приложения</option>
+  <option>Консультации</option>
+  <option>Другое</option>
+</select>
+
+**Сообщение:** <textarea style={{width: '100%', height: '120px', padding: '8px', margin: '8px 0', border: '1px solid #ccc', borderRadius: '4px', resize: 'vertical'}} placeholder="Опишите ваш проект..."></textarea>
+
+<Button variant="success" onClick={() => alert('Сообщение отправлено! Мы свяжемся с вами в ближайшее время.')}>
+  Отправить сообщение
+</Button>
+
+</Card>
+
+## Социальные сети
+
+Следите за нашими новостями и обновлениями:
+
+<div style={{display: 'flex', gap: '10px', margin: '20px 0'}}>
+  <Button onClick={() => window.open('https://t.me/ourcompany', '_blank')}>
+    📱 Telegram
+  </Button>
+  <Button onClick={() => window.open('https://vk.com/ourcompany', '_blank')}>
+    🎵 VKontakte
+  </Button>
+  <Button onClick={() => window.open('https://github.com/ourcompany', '_blank')}>
+    💻 GitHub
+  </Button>
+</div>
+
+## Быстрая связь
+
+Нужна срочная консультация? <Counter /> звонков сегодня!
+
+<Alert type="warning">
+**Горячая линия:** +7 (800) 123-45-67 (бесплатно по России)
+</Alert>
+
+```javascript
+// Время работы поддержки
+const supportHours = {
+  monday: '9:00-21:00',
+  tuesday: '9:00-21:00', 
+  wednesday: '9:00-21:00',
+  thursday: '9:00-21:00',
+  friday: '9:00-21:00',
+  saturday: '10:00-16:00',
+  sunday: 'выходной'
+};
+
+const today = new Date().toLocaleDateString('ru', {weekday: 'long'});
+console.log(`Сегодня поддержка работает: ${supportHours[today] || 'уточняйте'}`);
+```
+
+<Button variant="danger" onClick={() => alert('Функция в разработке')}>
+  🚨 Экстренная связь
+</Button>

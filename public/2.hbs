@@ -1,0 +1,28 @@
+<h1>Услуги компании {{company.name}}</h1>
+
+<p>Привет, <strong>{{user.name}}</strong>! Вот что мы можем предложить:</p>
+
+{{#each services}}
+<div style="background: {{#if popular}}#fff3cd{{else}}#f8f9fa{{/if}}; padding: 24px; border-radius: 12px; margin: 16px 0; border: 1px solid #e9ecef;">
+  <h3>{{name}}</h3>
+  <p><strong>Стоимость:</strong> {{currency price}}</p>
+  <p><strong>Срок выполнения:</strong> {{duration}}</p>
+  
+  {{#if popular}}
+  <div style="background: #fff3cd; color: #856404; padding: 12px; border-radius: 6px; margin: 12px 0;">
+    🔥 <strong>Популярная услуга!</strong> Выбор большинства наших клиентов
+  </div>
+  {{/if}}
+  
+  <button onclick="alert('Заявка на {{name}} принята!')" 
+          style="background: #667eea; color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer;">
+    Заказать за {{currency price}}
+  </button>
+</div>
+{{/each}}
+
+{{#ifCond user.role "===" "admin"}}
+<div style="background: #f8d7da; padding: 16px; border-radius: 8px; margin: 16px 0;">
+  <strong>Админ-панель:</strong> Дополнительные настройки доступны только администраторам
+</div>
+{{/ifCond}}

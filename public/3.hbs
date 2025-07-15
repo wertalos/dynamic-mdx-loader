@@ -1,0 +1,81 @@
+<h1>Портфолио {{company.name}}</h1>
+
+<p>Добро пожаловать в наше портфолио, <strong>{{user.name}}</strong>!</p>
+
+<div style="background: #d4edda; color: #155724; padding: 16px; border-radius: 8px; margin: 16px 0;">
+  За последний год мы завершили <strong>{{company.projects}}+ проектов</strong> и получили высокие оценки от клиентов!
+</div>
+
+<h2>Избранные проекты</h2>
+
+{{#each projects}}
+{{#if featured}}
+<div style="background: #fff3cd; padding: 24px; border-radius: 12px; margin: 16px 0; border: 1px solid #e9ecef;">
+  <h3>{{name}} ({{year}})</h3>
+  <p><strong>Технологии:</strong> {{tech}}</p>
+  <p><strong>Результат:</strong> {{result}}</p>
+  
+  <button onclick="alert('Проект {{name}} - один из наших лучших!')" 
+          style="background: #667eea; color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer;">
+    Подробнее о проекте
+  </button>
+</div>
+{{/if}}
+{{/each}}
+
+<h2>Все проекты</h2>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+{{#each projects}}
+<div style="background: {{#if featured}}#e3f2fd{{else}}#f8f9fa{{/if}}; padding: 20px; border-radius: 8px; border: 1px solid #dee2e6;">
+  <h4>{{name}}</h4>
+  <p><strong>Год:</strong> {{year}}</p>
+  <p><strong>Технологии:</strong> {{tech}}</p>
+  <p><strong>Достижение:</strong> {{result}}</p>
+  {{#if featured}}
+  <span style="background: #28a745; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">
+    ⭐ Рекомендуемый
+  </span>
+  {{/if}}
+</div>
+{{/each}}
+</div>
+
+<h2>Статистика</h2>
+
+<div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 16px 0;">
+  <p>Всего проектов: <strong>{{formatNumber company.projects}}</strong></p>
+  <p>Опыт работы: <strong>{{subtract currentYear company.founded}} лет</strong></p>
+  <p>Средняя оценка клиентов: <strong>{{repeat 5 "⭐"}}</strong></p>
+</div>
+
+{{#if (gte company.projects 50)}}
+<div style="background: #fff3cd; color: #856404; padding: 16px; border-radius: 8px; margin: 16px 0;">
+  🏆 <strong>Достижение разблокировано!</strong> Мы завершили более 50 проектов и готовы браться за самые сложные задачи!
+</div>
+{{/if}}
+
+<h2>Отзывы клиентов</h2>
+
+{{#each testimonials}}
+<div style="background: #f8f9fa; padding: 24px; border-radius: 12px; margin: 16px 0; border-left: 4px solid #667eea;">
+  <h4>{{author}}, {{company}}</h4>
+  <blockquote style="font-style: italic; margin: 16px 0; color: #666;">
+    "{{text}}"
+  </blockquote>
+  <p><strong>Оценка:</strong> {{repeat rating "⭐"}}</p>
+</div>
+{{/each}}
+
+<button onclick="alert('Спасибо за интерес к работам {{company.name}}!')" 
+        style="background: #27ae60; color: white; padding: 16px 32px; border: none; border-radius: 6px; cursor: pointer; font-size: 18px;">
+  Стать нашим клиентом
+</button>
+
+<hr style="margin: 40px 0;">
+
+<p style="color: #666; font-size: 14px;">
+  <strong>Обновлено:</strong> {{currentDate}} | 
+  <strong>Просматривает:</strong> {{user.name}} ({{user.role}}) |
+  <strong>Загружено:</strong> {{loadTime}}
+</p>
