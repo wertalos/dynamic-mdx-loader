@@ -4,7 +4,7 @@
 
 ### *Универсальная платформа для сравнения технологий динамической загрузки контента*
 
-![TemplateForge Banner](https://via.placeholder.com/800x400/667eea/ffffff?text=TemplateForge%0AДинамическая%20загрузка%20контента)
+![TemplateForge Banner](https://raw.githubusercontent.com/wertalos/dynamic-mdx-loader/main/docs/banner.svg)
 
 [![React](https://img.shields.io/badge/React-18.2.0-61dafb?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-14.0-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
@@ -17,9 +17,9 @@
 [![Nunjucks](https://img.shields.io/badge/Nunjucks-Supported-1e4d72?style=flat-square&logo=mozilla&logoColor=white)](https://mozilla.github.io/nunjucks/)
 [![JavaScript](https://img.shields.io/badge/Template_JS-Supported-f7df1e?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-[![Stars](https://img.shields.io/github/stars/username/templateforge?style=social)](https://github.com/wertalos/dynamic-mdx-loader/stargazers)
-[![Forks](https://img.shields.io/github/forks/username/templateforge?style=social)](https://github.com/wertalos/dynamic-mdx-loader/network/members)
-[![Issues](https://img.shields.io/github/issues/username/templateforge?style=flat-square&logo=github)](https://github.com/wertalos/dynamic-mdx-loader/issues)
+[![Stars](https://img.shields.io/github/stars/wertalos/dynamic-mdx-loader?style=social)](https://github.com/wertalos/dynamic-mdx-loader/stargazers)
+[![Forks](https://img.shields.io/github/forks/wertalos/dynamic-mdx-loader?style=social)](https://github.com/wertalos/dynamic-mdx-loader/network/members)
+[![Issues](https://img.shields.io/github/issues/wertalos/dynamic-mdx-loader?style=flat-square&logo=github)](https://github.com/wertalos/dynamic-mdx-loader/issues)
 
 </div>
 
@@ -42,8 +42,8 @@
 
 ```bash
 # Клонирование репозитория
-git clone https://github.com/username/templateforge.git
-cd templateforge
+git clone https://github.com/wertalos/dynamic-mdx-loader.git
+cd dynamic-mdx-loader
 
 # Установка зависимостей
 npm install

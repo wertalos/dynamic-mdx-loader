@@ -1,0 +1,74 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Technology Icons Gradient -->
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#61dafb;stop-opacity:0.8" />
+      <stop offset="25%" style="stop-color:#4c51bf;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#f0772b;stop-opacity:0.8" />
+      <stop offset="75%" style="stop-color:#f7df1e;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#1e4d72;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <!-- Glow Effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#backgroundGradient)"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="80" r="40" fill="rgba(255,255,255,0.1)" />
+  <circle cx="650" cy="320" r="60" fill="rgba(255,255,255,0.1)" />
+  <circle cx="750" cy="100" r="30" fill="rgba(255,255,255,0.1)" />
+  <circle cx="50" cy="300" r="25" fill="rgba(255,255,255,0.1)" />
+  
+  <!-- Technology Icons Background -->
+  <rect x="50" y="280" width="700" height="60" fill="url(#iconGradient)" opacity="0.2" rx="30"/>
+  
+  <!-- Main Title -->
+  <text x="400" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="700" fill="white" filter="url(#glow)">
+    🚀 TemplateForge
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="160" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.9)">
+    Универсальная платформа для сравнения технологий
+  </text>
+  <text x="400" y="185" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.9)">
+    динамической загрузки контента
+  </text>
+  
+  <!-- Technology Labels -->
+  <text x="120" y="320" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="white">
+    ⚛️ MDX
+  </text>
+  <text x="240" y="320" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="white">
+    📝 MarkDoc
+  </text>
+  <text x="360" y="320" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="white">
+    🔧 Handlebars
+  </text>
+  <text x="480" y="320" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="white">
+    🟨 Template JS
+  </text>
+  <text x="600" y="320" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="white">
+    🎨 Nunjucks
+  </text>
+  
+  <!-- Bottom tagline -->
+  <text x="400" y="370" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="400" fill="rgba(255,255,255,0.8)">
+    Исследуйте • Сравнивайте • Выбирайте лучшее решение
+  </text>
+</svg>
